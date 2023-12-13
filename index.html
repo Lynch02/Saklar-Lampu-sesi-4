@@ -4,8 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saklar Lampu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1>Cetrekan Lampu</h1>
+    <div
+      class="flex justify-center items-center min-h-screen w-full bg-gray-800 gap-10"
+    >
+      <!-- Lampu 1 -->
+      <div class="flex flex-col gap-2 items-center">
+        <img src="assets/images/off.gif" alt="" id="lampu1" />
+        <label
+          for="AcceptConditions1"
+          class="relative justify-between h-8 w-14 cursor-pointer [-webkit-tap-highlight-color:_transparent] flex.col"
+        >
+          <input
+            type="checkbox"
+            id="AcceptConditions1"
+            class="peer sr-only"
+            onchange="saklar()"
+          />
+
+          <span
+            class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-blue-500"
+          ></span>
+
+          <span
+            class="absolute inset-y-0 start-0 m-1 h-6 w-6 rounded-full bg-gray-300 ring-[6px] ring-inset ring-white transition-all peer-checked:start-8 peer-checked:w-2 peer-checked:bg-white peer-checked:ring-transparent"
+          >
+          </span>
+        </label>
+        <h2 class="label-lampu">Lampu 1</h2>
+      </div>
+
+      <!-- Lampu 2 -->
+      <div class="flex flex-col gap-2 items-center">
+        <img src="assets/images/off.gif" alt="" id="lampu2" />
+        <label
+          for="AcceptConditions2"
+          class="relative h-8 w-14 cursor-pointer [-webkit-tap-highlight-color:_transparent]"
+        >
+          <input
+            type="checkbox"
+            id="AcceptConditions2"
+            class="peer sr-only"
+            onchange="saklar()"
+          />
+
+          <span
+            class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-blue-500"
+          ></span>
+
+          <span
+            class="absolute inset-y-0 start-0 m-1 h-6 w-6 rounded-full bg-gray-300 ring-[6px] ring-inset ring-white transition-all peer-checked:start-8 peer-checked:w-2 peer-checked:bg-white peer-checked:ring-transparent"
+          >
+          </span>
+        </label>
+        <h2 class="label-lampu">Lampu 2</h2>
+      </div>
+
+      <!-- Lampu 3 -->
+      <div class="flex flex-col gap-2 items-center">
+        <img src="assets/images/off.gif" alt="" id="lampu3" />
+        <label
+          for="AcceptConditions3"
+          class="relative h-8 w-14 cursor-pointer [-webkit-tap-highlight-color:_transparent]"
+        >
+          <input
+            type="checkbox"
+            id="AcceptConditions3"
+            class="peer sr-only"
+            onchange="saklar()"
+          />
+
+          <span
+            class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-blue-500"
+          ></span>
+
+          <span
+            class="absolute inset-y-0 start-0 m-1 h-6 w-6 rounded-full bg-gray-300 ring-[6px] ring-inset ring-white transition-all peer-checked:start-8 peer-checked:w-2 peer-checked:bg-white peer-checked:ring-transparent"
+          >
+          </span>
+        </label>
+        <h2 class="label-lampu">Lampu 3</h2>
+      </div>
+    </div>
+    <!-- Style CSS -->
+    <style>
+      .label-lampu {
+        color: white;
+      }
+    </style>
+    <!-- JavaScript -->
+    <script src="saklar.js" type="application/JavaScript"></script>
   </body>
 </html>
